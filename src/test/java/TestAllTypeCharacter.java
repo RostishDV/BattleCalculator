@@ -1,5 +1,5 @@
-import coreSystems.AllTypeCharacter;
 import junit.framework.TestCase;
+import ru.project.coreSystems.AllTypeCharacter;
 
 import java.util.ArrayList;
 

@@ -1,4 +1,4 @@
-package coreSystems;
+package ru.project.coreSystems;
 
 import java.util.ArrayList;
 

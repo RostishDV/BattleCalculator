@@ -1,8 +1,7 @@
-import coreSystems.AllTypeCharacter;
-import coreSystems.QueueOfTurns;
 import junit.framework.TestCase;
+import ru.project.coreSystems.AllTypeCharacter;
+import ru.project.coreSystems.QueueOfTurns;
 
-import java.util.HashMap;
 import java.util.TreeMap;
 
 public class TestQueueOfTurns extends TestCase
@@ -65,9 +64,9 @@ public class TestQueueOfTurns extends TestCase
 //        it isn`t work
 //
 //        HashMap<String, String> expectedInfo = new HashMap<>();
-//        AllTypeCharacter firstCharacter = new AllTypeCharacter("first", 40, 18);
-//        AllTypeCharacter secondCharacter = new AllTypeCharacter("second", 40, 18);
-//        AllTypeCharacter thirdCharacter = new AllTypeCharacter("third", 40, 18);
+//        ru.project.coreSystems.AllTypeCharacter firstCharacter = new ru.project.coreSystems.AllTypeCharacter("first", 40, 18);
+//        ru.project.coreSystems.AllTypeCharacter secondCharacter = new ru.project.coreSystems.AllTypeCharacter("second", 40, 18);
+//        ru.project.coreSystems.AllTypeCharacter thirdCharacter = new ru.project.coreSystems.AllTypeCharacter("third", 40, 18);
 //        expectedQueue.put(1, firstCharacter);
 //        expectedQueue.put(2, secondCharacter);
 //        expectedQueue.put(3, thirdCharacter);

@@ -1,4 +1,5 @@
-import org.springframework.boot.ApplicationRunner;
+package ru.project;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -7,6 +8,6 @@ public class Core
 {
     public static void main(String[] args)
     {
-        SpringApplication.run(ApplicationRunner.class, args);
+        SpringApplication.run(Core.class, args);
     }
 }

@@ -1,6 +1,4 @@
-package coreSystems;
-
-import org.springframework.boot.jackson.JsonComponent;
+package ru.project.coreSystems;
 
 import java.util.ArrayList;
 import java.util.Comparator;
