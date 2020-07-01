@@ -8,7 +8,6 @@ public class AllTypeCharacter
 
     ArrayList<String> resists ;
     ArrayList<String> immunities;
-    ArrayList<String> spells;
     ArrayList<String> statuses;
 
     public AllTypeCharacter(String name, int hits, int kd)
@@ -18,7 +17,6 @@ public class AllTypeCharacter
         this.kd = kd;
         resists = new ArrayList<>();
         immunities = new ArrayList<>();
-        spells = new ArrayList<>();
         statuses = new ArrayList<>();
     }
 
@@ -40,6 +38,40 @@ public class AllTypeCharacter
         return resists;
     }
 
+    public void addToImmunities(String immunity)
+    {
+        immunities.add(immunity);
+    }
 
+    public void removeFormImmunities(String immunity)
+    {
+        if (immunities.contains(immunity))
+        {
+            immunities.remove(immunity);
+        }
+    }
+
+    public ArrayList<String> getImmunities()
+    {
+        return immunities;
+    }
+
+    public void addToStatuses(String status)
+    {
+        statuses.add(status);
+    }
+
+    public void removeFormStatuses(String status)
+    {
+        if (statuses.contains(status))
+        {
+            statuses.remove(status);
+        }
+    }
+
+    public ArrayList<String> getStatuses()
+    {
+        return statuses;
+    }
 
 }

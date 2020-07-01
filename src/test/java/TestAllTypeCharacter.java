@@ -21,14 +21,14 @@ public class TestAllTypeCharacter
 
     public void testAddToResists()
     {
-        expectedResists.stream().forEach(allTypeCharacter::addToResists);
+        expectedResists.forEach(allTypeCharacter::addToResists);
         assertEquals(expectedResists, allTypeCharacter.getResists());
     }
 
     //remove existent resist
     public void testRemoveFromResistsExistent()
     {
-        expectedResists.stream().forEach(allTypeCharacter::addToResists);
+        expectedResists.forEach(allTypeCharacter::addToResists);
         allTypeCharacter.removeFromResists(expectedResists.get(2));
         expectedResists.remove(2);
         assertEquals(expectedResists, allTypeCharacter.getResists());
@@ -37,9 +37,58 @@ public class TestAllTypeCharacter
     //remove nonexistent resist
     public void testRemoveFromResistsNonexistent()
     {
-        expectedResists.stream().forEach(allTypeCharacter::addToResists);
+        expectedResists.forEach(allTypeCharacter::addToResists);
         allTypeCharacter.removeFromResists("cold");
         assertEquals(expectedResists, allTypeCharacter.getResists());
+    }
+
+    //Immunity =================================================================
+    public void testAddToImmunities()
+    {
+        expectedResists.forEach(allTypeCharacter::addToImmunities);
+        assertEquals(expectedResists, allTypeCharacter.getImmunities());
+    }
+
+    //remove existent immunity
+    public void testRemoveFromImmunitiesExistent()
+    {
+        expectedResists.forEach(allTypeCharacter::addToImmunities);
+        allTypeCharacter.removeFormImmunities(expectedResists.get(2));
+        expectedResists.remove(2);
+        assertEquals(expectedResists, allTypeCharacter.getImmunities());
+    }
+
+    //remove nonexistent immunity
+    public void testRemoveFromImmunitiesNonexistent()
+    {
+        expectedResists.forEach(allTypeCharacter::addToImmunities);
+        allTypeCharacter.removeFormImmunities("cold");
+        assertEquals(expectedResists, allTypeCharacter.getImmunities());
+    }
+
+    //status =============================================================
+
+    public void testAddToStatuses()
+    {
+        expectedResists.forEach(allTypeCharacter::addToStatuses);
+        assertEquals(expectedResists, allTypeCharacter.getStatuses());
+    }
+
+    //remove existent immunity
+    public void testRemoveFromStatusesExistent()
+    {
+        expectedResists.forEach(allTypeCharacter::addToStatuses);
+        allTypeCharacter.removeFormStatuses(expectedResists.get(2));
+        expectedResists.remove(2);
+        assertEquals(expectedResists, allTypeCharacter.getStatuses());
+    }
+
+    //remove nonexistent immunity
+    public void testRemoveFromStatusesNonexistent()
+    {
+        expectedResists.forEach(allTypeCharacter::addToStatuses);
+        allTypeCharacter.removeFormStatuses("cold");
+        assertEquals(expectedResists, allTypeCharacter.getStatuses());
     }
 
     @Override
