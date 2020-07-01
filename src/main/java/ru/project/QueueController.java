@@ -41,6 +41,14 @@ public class QueueController
         return queueOfTurns.getCurrentTurnInfo();
     }
 
+    @RequestMapping("/removeCharacter")
+    public String removeCharacter(@RequestParam(value = "initiative", required = false,
+            defaultValue = "10") int initiative)
+    {
+        queueOfTurns.removeCharacter(initiative);
+        return "successful deleted";
+    }
+
     @RequestMapping("/getTurnInfo")
     public HashMap<String, String> getTurnInfo()
     {
