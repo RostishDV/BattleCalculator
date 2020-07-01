@@ -19,7 +19,7 @@ dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-parent', version: '2.3.1.RELEASE'
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.3.1.RELEASE'
-
+    compile group: 'com.googlecode.json-simple', name: 'json-simple', version: '1.1.1'
     compile group: 'org.netbeans.external', name: 'com-jcraft-jsch', version: 'RELEASE120-1'
 
 }

@@ -1,3 +1,5 @@
+package coreSystems;
+
 import java.util.ArrayList;
 
 public class AllTypeCharacter
@@ -93,5 +95,12 @@ public class AllTypeCharacter
     public int getHits()
     {
         return currentHits;
+    }
+
+    public String toString()
+    {
+        return "name: " + name + "; hits: " + currentHits + "/" + hits + "; kd " + kd +
+                "; resists: " + resists.toString() + "; immunities: " + immunities.toString()+
+                "; statuses: " + statuses.toString();
     }
 }

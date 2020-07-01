@@ -1,3 +1,4 @@
+import coreSystems.AllTypeCharacter;
 import junit.framework.TestCase;
 
 import java.util.ArrayList;
