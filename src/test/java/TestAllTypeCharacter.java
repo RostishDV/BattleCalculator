@@ -10,7 +10,7 @@ public class TestAllTypeCharacter
     ArrayList<String> expectedResists;
 
     @Override
-    protected void setUp() throws Exception
+    protected void setUp()
     {
         allTypeCharacter = new AllTypeCharacter("Test1", 40, 18);
         expectedResists = new ArrayList<>();
@@ -89,6 +89,28 @@ public class TestAllTypeCharacter
         expectedResists.forEach(allTypeCharacter::addToStatuses);
         allTypeCharacter.removeFormStatuses("cold");
         assertEquals(expectedResists, allTypeCharacter.getStatuses());
+    }
+
+    // hits ===============================================
+    //this tests for character with 40 hits
+    public void testTakeDamage()
+    {
+        allTypeCharacter.takeDamage(10);
+        assertEquals(30, allTypeCharacter.getHits());
+    }
+
+    public void testTakeHealLessThenMaxHits()
+    {
+        allTypeCharacter.takeDamage(10);
+        allTypeCharacter.takeHeal(5);
+        assertEquals(35, allTypeCharacter.getHits());
+    }
+
+    public void testTakeHealMoreThenMaxHits()
+    {
+        allTypeCharacter.takeDamage(10);
+        allTypeCharacter.takeHeal(15);
+        assertEquals(40, allTypeCharacter.getHits());
     }
 
     @Override

@@ -4,6 +4,7 @@ public class AllTypeCharacter
 {
     String name;
     int hits;
+    int currentHits;
     int kd;
 
     ArrayList<String> resists ;
@@ -14,6 +15,7 @@ public class AllTypeCharacter
     {
         this.name = name;
         this.hits = hits;
+        this.currentHits = hits;
         this.kd = kd;
         resists = new ArrayList<>();
         immunities = new ArrayList<>();
@@ -74,4 +76,22 @@ public class AllTypeCharacter
         return statuses;
     }
 
+    public void takeDamage(int damage)
+    {
+        currentHits -= damage;
+    }
+
+    public void takeHeal(int heal)
+    {
+        currentHits += heal;
+        if (currentHits > hits)
+        {
+            currentHits = hits;
+        }
+    }
+
+    public int getHits()
+    {
+        return currentHits;
+    }
 }
