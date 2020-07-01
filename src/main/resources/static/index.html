@@ -3,11 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <title>Main page</title>
+    <script language="JavaScript">
+    var names = ['Zombie', 'Goblin', 'Pidorass', 'NewMonster'];
+
+
+    function getRandomInRange(min, max) {
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+    function setParams(){
+        document.getElementById("name").value = citys[getRandomInRange(0,3)];
+        document.getElementById("age").value = getRandomInRange(1, 150);
+    }
+	</script>
 </head>
 <body>
     <p>Get your greeting <a href="/greeting">here</a> </p>
-    <p><a href="/addCharacter">add new character to queue</a> </p>
-    <p><a href="/getTurnInfo">Get turn info</a> </p>
-    <p><a href="/nextTurn">end this turn</a></p>
+    <p><a href="/getTurnInfo">Текущий ход</a> </p>
+    <p><a href="/nextTurn">Закончить текущий ход</a></p>
+
+    <p><h1>Добавить персонажа</h1></p>
+    <form method="POST" action="/addCharacter">
+        <p>Введите имя</p>
+        <p><input class="testText" type="text" name="name" id="name"></p>
+        <p>Введите хиты</p>
+        <p><input type="text" name="hits" id="hits"></p>
+        <p>Введите КД</p>
+        <p><input type="text" name="kd" id="kd"></p>
+        <p>Введите Инициативу</p>
+        <p><input type="text" name="initiative" id="initiative"></p>
+        <p><input type="submit" name="send"></p>
+    </form>
+
+    <p><h1>Удалить по инициативе</h1></p>
+    <form action="/removeCharacter">
+        <p>Введите инициативу удаляемого существа</p>
+        <p><input class="testText" type="text" name="name" id="initiative"></p>
+        <p><input type="submit" name="send"></p>
+    </form>
 </body>
 </html>

@@ -16,7 +16,7 @@ public class QueueController
 
     @RequestMapping("/greeting")
     @ResponseBody
-    public ModelAndView QueueController(@RequestParam(name = "name", required = false,
+    public ModelAndView queueController(@RequestParam(name = "name", required = false,
             defaultValue = "World") String name, Model model)
     {
         model.addAttribute("name", name);
